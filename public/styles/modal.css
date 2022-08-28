@@ -1,0 +1,84 @@
+.modal-wrapper.active {
+
+  visibility: visible;
+  opacity: 1;
+
+
+
+}
+
+.modal-wrapper {
+
+  width: 100vw;
+  height: 100vh;
+  background-color: #040911d0;
+
+
+
+  position: fixed;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  visibility: hidden;
+  opacity: 0;
+
+
+}
+
+.modal-wrapper .modal {
+
+  width: min(59rem, 90%);
+
+  background: var(--background);
+  padding: 6.4rem;
+  border-radius: 0.8rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  gap: 2.4rem;
+
+}
+
+.modal-wrapper .modal p {
+  font-weight: 400;
+  color: var(--grey-dark);
+}
+
+.modal-wrapper .modal form input {
+  margin-bottom: 4rem;
+  padding: 1.3rem 1.6rem;
+  border: 0.2rem solid var(--blue);
+
+  outline: none;
+}
+
+.modal-wrapper .modal form div {
+
+  display: flex;
+  gap: 0.8rem;
+
+
+}
+
+.modal-wrapper .modal .button {
+
+
+
+  background-color: var(--grey-light);
+  color: var(--grey-dark);
+
+  padding: 1.3rem 3.2rem;
+
+}
+
+.modal-wrapper .modal button {
+
+  background-color: var(--red);
+
+
+
+}

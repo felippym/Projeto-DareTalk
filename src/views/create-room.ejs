@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dare.Talk</title>
+
+  <!-- CSS -->
+
+  <link rel="stylesheet" href="./styles/global.css" />
+  <link rel="stylesheet" href="./styles/home.css" />
+
+  <!-- FONTS GOOGLE-->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@500;600;700&display=swap"
+    rel="stylesheet" />
+</head>
+
+<body>
+  <div id="password" class="content">
+    <header>
+      <a href="index.ejs">
+        <img class="img" src="./images/logodare.svg" alt="logo" />
+      </a>
+      <div class="circle"></div>
+    </header>
+
+    <div id="bg"></div>
+    <div class="ball top"></div>
+    <div class="ball bottom"></div>
+    <main>
+      <div class="container">
+        <section>
+          <h2>Crie sua própia sala</h2>
+          <form action="">
+            <label class="sr-only" for="room-id">insira uma senha</label>
+            <!-- class na label para sumir com a label, 
+            porem continuar com acessibilidade -->
+
+            <input type="password" id="room-id" placeholder="Insira uma senha" />
+            <button>
+              <img src="./images/lock.svg" alt="entrar na sala" />
+              Criar sala
+            </button>
+          </form>
+        </section>
+      </div>
+    </main>
+  </div>
+</body>
+
+</html>
