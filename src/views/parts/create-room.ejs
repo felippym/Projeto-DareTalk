@@ -1,0 +1,14 @@
+<section>
+  <h2>Crie sua própia sala</h2>
+  <form method="post" action="/create-room">
+    <label class="sr-only" for="room-id">insira uma senha</label>
+    <!-- class na label para sumir com a label, 
+            porem continuar com acessibilidade -->
+
+    <input type="password" name="password" id="room-id" placeholder="Insira uma senha" required />
+    <button>
+      <img src="./images/lock.svg" alt="entrar na sala" />
+      Criar sala
+    </button>
+  </form>
+</section>

@@ -9,17 +9,20 @@
 
   <!-- CSS -->
 
-  <link rel="stylesheet" href="./styles/global.css" />
+  <link rel="stylesheet" href="/styles/global.css" />
 
-  <link rel="stylesheet" href="./styles/room.css" />
-  <link rel="stylesheet" href="./styles/modal.css" />
+  <link rel="stylesheet" href="/styles/room.css" />
+  <link rel="stylesheet" href="/styles/modal.css" />
 
   <!-- FONTS GOOGLE-->
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet"
+    href="https://www.elegantthemes.com/layouts/wp-content/plugins/woocommerce/packages/woocommerce-blocks/build/wc-blocks-style.css?ver=8.0.0">
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@500;600;700&display=swap"
     rel="stylesheet" />
+
 
   <script src="/scripts/main.js" defer type="module"></script>
 
@@ -30,16 +33,16 @@
 
   <div id="room" class="content">
     <header>
-      <a href="index.html">
-        <img class="img" src="./images/logodare.svg" alt="logo" />
+      <a href="/">
+        <img class="img" src="/images/logodare.svg" alt="logo" />
       </a>
       <div class="buttons">
-        <div class="button outlined">
-          #323243
-          <img src="./images/copy.svg" alt="" />
+        <div class="button outlined" id="room-id" data-id="<%=roomid %>">
+          #<%=roomid %>
+            <img src=" /images/copy.svg" alt="" />
         </div>
         <a class="button" href="#">
-          <img src="./images/users-room.svg" alt="" />
+          <img src="/images/users-room.svg" alt="" />
           Criar sala
         </a>
       </div>
@@ -48,7 +51,7 @@
     <main>
       <section id="question-form">
         <h2>Faça sua pergunta</h2>
-        <form action="">
+        <form action="/question/create/" method="post">
           <label class="sr-only" for="question">O que você quer perguntar?</label>
           <textarea name="question" id="question" placeholder="O que você quer perguntar?"></textarea>
           <footer>
@@ -69,19 +72,19 @@
           <div class="question-wrapper">
             <div class="question-content">
               <div class="user">
-                <img src="images/avatar.svg" alt="avartar da pergunta" />
+                <img src="/images/avatar.svg" alt="avartar da pergunta" />
               </div>
               <div class="question">
                 <p>Qual a diferença entre const, var e let no JavaScript</p>
               </div>
             </div>
             <div class="actions">
-              <a href="#" class="check">
-                <img src="images/check.svg" alt="marcar como lixa" />
+              <a href="#" class="check" data-id="2">
+                <img src="/images/check.svg" alt="marcar como lixa" />
                 Marcar como lida
               </a>
-              <a href="#" class="delete">
-                <img src="images/trash.svg" alt="excluir pergunta" />
+              <a href="#" class="delete" data-id="2">
+                <img src="/images/trash.svg" alt="excluir pergunta" />
                 Excluir
               </a>
             </div>
@@ -91,7 +94,7 @@
           <div class="question-wrapper">
             <div class="question-content">
               <div class="user">
-                <img src="images/avatar.svg" alt="avartar da pergunta" />
+                <img src="/images/avatar.svg" alt="avartar da pergunta" />
               </div>
               <div class="question">
                 <p>O que é JavaScript?</p>
@@ -99,12 +102,12 @@
 
             </div>
             <div class="actions">
-              <a href="#" class="check">
-                <img src="images/check.svg" alt="marcar como lixa" />
+              <a href="#" class="check" data-id="3">
+                <img src="/images/check.svg" alt="marcar como lixa" />
                 Marcar como lida
               </a>
-              <a href="#" class="delete">
-                <img src="images/trash.svg" alt="excluir pergunta" />
+              <a href="#" class="delete" data-id="3">
+                <img src="/images/trash.svg" alt="excluir pergunta" />
                 Excluir
               </a>
             </div>
@@ -115,7 +118,7 @@
           <div class="question-wrapper">
             <div class="question-content">
               <div class="user">
-                <img src="images/avatar.svg" alt="avartar da pergunta" />
+                <img src="/images/avatar.svg" alt="avartar da pergunta" />
               </div>
               <div class="question">
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius aut beatae non placeat obcaecati autem
@@ -124,12 +127,12 @@
               </div>
             </div>
             <div class="actions">
-              <a href="#" class="check">
-                <img src="images/check.svg" alt="marcar como lixa" />
+              <a href="#" class="check" data-id="4">
+                <img src="/images/check.svg" alt="marcar como lixa" />
                 Marcar como lida
               </a>
-              <a href="#" class="delete">
-                <img src="images/trash.svg" alt="excluir pergunta" />
+              <a href="#" class="delete" data-id="4">
+                <img src="/images/trash.svg" alt="excluir pergunta" />
                 Excluir
               </a>
             </div>
@@ -139,7 +142,7 @@
           <div class="question-wrapper read">
             <div class="question-content">
               <div class="user">
-                <img src="images/avatar.svg" alt="avartar da pergunta" />
+                <img src="/images/avatar.svg" alt="avartar da pergunta" />
               </div>
               <div class="question">
                 <p>O que é TypeScript</p>
@@ -147,8 +150,8 @@
             </div>
             <div class="actions">
 
-              <a href="#" class="delete">
-                <img src="images/trash.svg" alt="excluir pergunta" />
+              <a href="#" class="delete" data-id="1">
+                <img src="/images/trash.svg" alt="excluir pergunta" />
                 Excluir
               </a>
             </div>
@@ -168,10 +171,10 @@
       <h2>Excluir pergunta</h2>
       <p>Tem certeza que você deseja excluir esta pergunta?</p>
 
-      <form>
+      <form action="#" method="post">
 
         <label class="sr-only" for="password">Digite a senha</label>
-        <input id="password" type="password" placeholder="Digite a senha">
+        <input id="password" name="password" type="password" placeholder="Digite a senha">
         <div>
           <div class="button">Cancelar</div>
           <button type="submit">Sim, excluir</button>

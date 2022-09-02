@@ -13,7 +13,7 @@ route.get("/room/:room", async (req, res) => {
   res.render("room", { roomid });
 });
 
-//formato de como as infos devem vir do modalrgrgrggr
+//formato de como as infos devem vir do modal
 route.post("/create-room", RoomController.create);
 
 route.post("question/create/:room", questionController.create);
